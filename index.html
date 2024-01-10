@@ -29,24 +29,23 @@
             cursor: pointer;
             padding: 10px;
             border-radius: 5px;
-            background-color: #f5a524;
+            background-color: #f5a524; /* Buttercup */
             font-family: 'Patrick Hand SC', cursive;
             color: #fff;
             font-size: 20px;
         }
 
         .toggle-button.sushi {
-            background-color: #8dc63f;
-            /* Sushi green for button background */
+            background-color: #8dc63f; /* Sushi green */
         }
 
         h1 {
-            color: #c23b24;
+            color: #c23b24; /* Tall Poppy */
             text-align: center;
         }
 
         h2 {
-            color: #c23b24;
+            color: #c23b24; /* Tall Poppy */
             margin-top: 30px;
             margin-left: 30px;
         }
@@ -60,7 +59,7 @@
 
         .ingredient,
         .step {
-            background-color: #f5a524;
+            background-color: #f5a524; /* Buttercup */
             color: #fff;
             padding: 15px;
             margin: 10px 0;
@@ -68,7 +67,7 @@
         }
 
         .step {
-            background-color: #8dc63f;
+            background-color: #8dc63f; /* Sushi green */
         }
 
         .main-container {
@@ -78,16 +77,12 @@
         }
 
         .content-container {
-            /* Adjust width as needed */
             width: 50%;
         }
 
         .recipe-image {
             width: 40%;
-            /* Fixed width */
-            /* Maintain aspect ratio */
             align-items: center;
-            /* Add some margin */
         }
     </style>
 </head>
@@ -98,7 +93,7 @@
     <div class="main-container">
         <div class="content-container">
             <div class="header">
-                <button class="toggle-button" onclick="toggleSection('ingredients', this)">+</button>
+                <button class="toggle-button" onclick="toggleSection('ingredients', this)">➕</button>
                 <h2>Ingredients</h2>
             </div>
             <div id="ingredients" class="content">
@@ -112,7 +107,7 @@
             </div>
 
             <div class="header">
-                <button class="toggle-button sushi" onclick="toggleSection('preparation', this)">+</button>
+                <button class="toggle-button sushi" onclick="toggleSection('preparation', this)">➖</button>
                 <h2>Preparation</h2>
             </div>
             <div id="preparation" class="content">
@@ -134,10 +129,10 @@
             var section = document.getElementById(sectionId);
             if (section.style.maxHeight) {
                 section.style.maxHeight = null;
-                btn.textContent = '+';
+                btn.textContent = '➕';
             } else {
                 section.style.maxHeight = section.scrollHeight + "px";
-                btn.textContent = '-';
+                btn.textContent = '➖';
             }
         }
 
